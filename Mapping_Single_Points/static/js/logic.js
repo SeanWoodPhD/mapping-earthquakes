@@ -12,20 +12,20 @@ let map = L.map('mapid').setView([34.0522, -118.2437], 14);
 //     zoom: 4
 //   });
 
-// //  Add a marker to the map for Los Angeles, California.
-// let marker = L.circle([34.0522, -118.2437], {
-//    radius: 300,
-//    color: 'black',
-//    fillColor: 'yellow',
-//    fillOpacity: 0.1
-// }).addTo(map);
-
 //  Add a marker to the map for Los Angeles, California.
-let marker = L.circleMarker([34.0522, -118.2437], {
+let marker = L.circle([34.0522, -118.2437], {
    radius: 300,
    color: 'black',
-   fillColor: '#ffffa1',
+   fillColor: 'yellow',
+   fillOpacity: 0.1
 }).addTo(map);
+
+// //  Add a marker to the map for Los Angeles, California.
+// let marker = L.circleMarker([34.0522, -118.2437], {
+//    radius: 300,
+//    color: 'black',
+//    fillColor: '#ffffa1',
+// }).addTo(map);
 
 // We create the tile layer that will be the background of our map.
 let streets = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/dark-v10/tiles/{z}/{x}/{y}?access_token={accessToken}', {
